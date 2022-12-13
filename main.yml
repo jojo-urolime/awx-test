@@ -1,0 +1,2 @@
+- name: lookup secretsmanager secret in the current region using the nested feature
+  debug: msg="{{ lookup('amazon.aws.aws_secret', 'awx-test.jojo-test', aws_profile=aws-squirro-internal, nested=true) }}"
