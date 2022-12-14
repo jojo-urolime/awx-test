@@ -1,7 +1,7 @@
 ---
 - name: Playbook
-  hosts: all
+  hosts: localhost
   tasks:
     - name: lookup secretsmanager secret in the current region using the nested feature
       debug: >
-        msg="{{ lookup('aws_secret', 'awx-test.jojo-test', region='eu-central-1', aws_profile='squirro-internal', nested=true) }}"
+        msg="{{ lookup('aws_secret', 'awx-test.jojo-test', region='eu-central-1', aws_access_key="{{ aws_secrets_manager_access_key }}", aws_secret_key="{{ aws_secrets_manager_secret_key }}", nested=true) }}"
