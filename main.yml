@@ -4,4 +4,4 @@
   tasks:
     - name: lookup secretsmanager secret in the current region using the nested feature
       debug: >
-        msg="{{ lookup('aws_secret', 'awx-test.jojo-test', region='eu-central-1', nested=true) }}"
+        msg="{{ lookup('aws_secret', 'squirro-users.abdul_key', region='us-east-2, nested=true) }}"
