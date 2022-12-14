@@ -4,4 +4,4 @@
   tasks:
     - name: lookup secretsmanager secret in the current region using the nested feature
       debug: >
-        msg="{{ lookup('aws_secret', 'awx-test.jojo-test', region='eu-central-1', aws_access_key="{{ aws_secrets_manager_access_key }}", aws_secret_key="{{ aws_secrets_manager_secret_key }}", nested=true) }}"
+        msg="{{ lookup('aws_secret', 'awx-test.jojo-test', region='eu-central-1', aws_access_key="{{ AWS_ACCESS_KEY_ID }}", aws_secret_key="{{ AWS_SECRET_ACCESS_KEY }}", nested=true) }}"
