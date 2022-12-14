@@ -1,6 +1,6 @@
 ---
 - name: Playbook
-  hosts: localhost
+  hosts: all
   tasks:
     - name: lookup secretsmanager secret in the current region using the nested feature
       debug: >
